@@ -63,16 +63,6 @@ namespace AnswerBackendTask.Services
             return this.storage.LastGeneratedId;
         }
 
-        private void Initialize()
-        {
-            for (int i = 1; i < 5; i++)
-                AddEntity(new Item
-                {
-                    Id = i,
-                    Name = "Item" + i
-                });
-        }
-
         private static Storage storageInstance = new Storage();
 
         public class Storage
@@ -84,7 +74,6 @@ namespace AnswerBackendTask.Services
         static InMemoryDatabase()
         {
             var db = AcquireDatabase();
-            db.Initialize();
         }
         public static InMemoryDatabase AcquireDatabase()
         {
@@ -94,7 +83,6 @@ namespace AnswerBackendTask.Services
         public static void Reset()
         {
             storageInstance = new Storage();
-            new InMemoryDatabase(storageInstance).Initialize();
         }
     }
 }

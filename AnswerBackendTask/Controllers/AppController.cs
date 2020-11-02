@@ -1,18 +1,13 @@
 ﻿using AnswerBackendTask.Entities;
 using Microsoft.AspNetCore.Mvc;
 using AnswerBackendTask.Services;
-using System.Diagnostics.Contracts;
 
 namespace AnswerBackendTask.Controllers
 {
     public class AppController : Controller
     {
-        private readonly InMemoryDatabase db;
+        private InMemoryDatabase db = InMemoryDatabase.AcquireDatabase();
         
-        public AppController()
-        {
-            this.db = new InMemoryDatabase(new InMemoryDatabase.Storage());
-        }
         [HttpPost]
         [Route("/create/{itemName}")]
         public ActionResult<Item> CreateItem(string itemName)
@@ -46,6 +41,22 @@ namespace AnswerBackendTask.Controllers
 
             db.Remove(item);
             return Ok();
+        }
+
+        [HttpPut]
+        [Route("edit/{itemId}/{newName}")]
+        public ActionResult<Item> EditItem(long itemId, string newName)
+        {
+            var item = db.GetById<Item>(itemId);
+
+            if (item == null)
+                return NotFound("No item with this Id");
+
+            db.Remove(item);
+            item.Name = newName;
+            db.AddEntity(item);
+
+            return item;
         }
     }
 }
