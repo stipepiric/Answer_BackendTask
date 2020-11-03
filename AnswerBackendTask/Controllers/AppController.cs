@@ -1,6 +1,7 @@
 ﻿using AnswerBackendTask.Entities;
 using Microsoft.AspNetCore.Mvc;
 using AnswerBackendTask.Services;
+using AnswerBackendTask.Models;
 
 namespace AnswerBackendTask.Controllers
 {
@@ -31,11 +32,27 @@ namespace AnswerBackendTask.Controllers
             return item;
         }
 
+        [HttpGet]
+        [Route("/getallitems")]
+        public ActionResult<ItemsDTO> GetAllItems()
+        {
+            var items = db.GetAll<Item>();
+
+            if (items.Count == 0)
+                return BadRequest("There are no items!");
+
+            return new ItemsDTO
+            {
+                Items = items
+            };
+        }
+
         [HttpDelete]
         [Route("/delete/{itemId}")]
         public ActionResult DeleteItem(long itemId)
         {
             var item = db.GetById<Item>(itemId);
+
             if (item == null)
                 return BadRequest("Item not found!");
 
