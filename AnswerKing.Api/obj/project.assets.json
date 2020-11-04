@@ -52,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerBackendTask\\AnswerKing.Api.csproj",
+      "projectUniqueName": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerKing.Api\\AnswerKing.Api.csproj",
       "projectName": "AnswerKing.Api",
-      "projectPath": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerBackendTask\\AnswerKing.Api.csproj",
+      "projectPath": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerKing.Api\\AnswerKing.Api.csproj",
       "packagesPath": "C:\\Users\\PiricS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerBackendTask\\obj\\",
+      "outputPath": "C:\\Users\\PiricS\\source\\repos\\Answer_BackendTask\\AnswerKing.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

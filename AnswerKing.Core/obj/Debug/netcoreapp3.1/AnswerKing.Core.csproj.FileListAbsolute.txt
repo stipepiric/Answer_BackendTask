@@ -1,0 +1,8 @@
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\bin\Debug\netcoreapp3.1\AnswerKing.Core.deps.json
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\bin\Debug\netcoreapp3.1\AnswerKing.Core.dll
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\bin\Debug\netcoreapp3.1\AnswerKing.Core.pdb
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\obj\Debug\netcoreapp3.1\AnswerKing.Core.AssemblyInfoInputs.cache
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\obj\Debug\netcoreapp3.1\AnswerKing.Core.AssemblyInfo.cs
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\obj\Debug\netcoreapp3.1\AnswerKing.Core.csproj.CoreCompileInputs.cache
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\obj\Debug\netcoreapp3.1\AnswerKing.Core.dll
+C:\Users\PiricS\source\repos\Answer_BackendTask\AnswerKing.Core\obj\Debug\netcoreapp3.1\AnswerKing.Core.pdb
