@@ -34,6 +34,7 @@ namespace AnswerKing.Infrastructure.Repository
         {
             var item = db.CreateEntity<Item>();
             item.Name = itemName;
+            item.Categories = new List<Category>();
             db.AddEntity(item);
 
             return item;

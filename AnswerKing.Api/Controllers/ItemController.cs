@@ -10,7 +10,6 @@ namespace AnswerKing.Api.Controllers
 
     public class ItemController : Controller
     {
-        private IMemory<IEntity> db = InMemoryDatabase.AcquireDatabase();
         private readonly IItemRepository itemRepository;
 
         public ItemController(IItemRepository _itemRepository)
@@ -30,7 +29,7 @@ namespace AnswerKing.Api.Controllers
         [Route("{itemId}")]
         public IActionResult GetItem(long itemId)
         {
-            var item = db.GetById<Item>(itemId);
+            var item = this.itemRepository.Get(itemId);
 
             if (item == null)
                 return BadRequest("No item with this id!");
